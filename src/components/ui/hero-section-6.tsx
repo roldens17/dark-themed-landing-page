@@ -28,16 +28,16 @@ export function HeroSection() {
                 <span className="bg-muted rounded-[calc(var(--radius)-0.25rem)] px-2 py-1 text-xs">
                   New
                 </span>
-                <span className="text-sm">KlickSpark Media studio landing page</span>
+                <span className="text-sm">Independent studio for digital product work</span>
                 <span className="bg-(--color-border) block h-4 w-px" />
                 <ArrowRight className="size-4" />
               </a>
 
               <h1 className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-5xl">
-                KlickSpark Media builds Shopify, SaaS, and WordPress products
+                We design and build sharper Shopify, SaaS, and WordPress experiences
               </h1>
               <p className="mt-8">
-                We are a digital studio focused on storefronts, product interfaces, and content systems that need stronger structure, sharper design, and cleaner execution.
+                KlickSpark Media helps brands and product teams turn messy digital surfaces into cleaner storefronts, tighter interfaces, and more credible systems.
               </p>
 
               <div>
@@ -63,7 +63,7 @@ export function HeroSection() {
                   </div>
                 </form>
 
-                <ul className="list-inside list-disc space-y-2">
+                <ul className="list-inside list-disc space-y-2 text-white/75">
                   <li>Shopify builds</li>
                   <li>SaaS interfaces</li>
                   <li>WordPress systems</li>

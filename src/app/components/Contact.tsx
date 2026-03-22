@@ -5,8 +5,7 @@ export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
-    budget: "",
+    projectType: "",
     message: ""
   });
 
@@ -37,7 +36,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="space-y-8">
             <div>
               <h3 className="mb-8 text-2xl">Contact Information</h3>
@@ -76,7 +75,7 @@ export function Contact() {
             </div>
 
             <div className="rounded-2xl border bg-background/70 p-6 backdrop-blur-sm">
-              <h4 className="text-lg mb-4">What To Include</h4>
+              <h4 className="text-lg mb-4">Fastest Brief</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Platform</span>
@@ -96,7 +95,7 @@ export function Contact() {
 
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="block text-sm text-white/80 mb-2">
                     Full Name *
@@ -130,41 +129,24 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm text-white/80 mb-2">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
-                    placeholder="Your Company"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="budget" className="block text-sm text-white/80 mb-2">
-                    Project Budget
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
-                    style={{ colorScheme: "dark" }}
-                  >
-                    <option value="">Select budget range</option>
-                    <option value="10k-25k">$10k - $25k</option>
-                    <option value="25k-50k">$25k - $50k</option>
-                    <option value="50k-100k">$50k - $100k</option>
-                    <option value="100k+">$100k+</option>
-                  </select>
-                </div>
+              <div>
+                <label htmlFor="projectType" className="block text-sm text-white/80 mb-2">
+                  Project Type
+                </label>
+                <select
+                  id="projectType"
+                  name="projectType"
+                  value={formData.projectType}
+                  onChange={handleChange}
+                  className="w-full rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
+                  style={{ colorScheme: "dark" }}
+                >
+                  <option value="">Select project type</option>
+                  <option value="shopify">Shopify</option>
+                  <option value="saas">SaaS</option>
+                  <option value="wordpress">WordPress</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
 
               <div>
@@ -179,7 +161,7 @@ export function Contact() {
                   onChange={handleChange}
                   rows={6}
                   className="w-full resize-none rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
-                  placeholder="Tell us what you are building, what is not working, and what outcome you need."
+                  placeholder="Tell us what you are building and what you need help with."
                 />
               </div>
 
