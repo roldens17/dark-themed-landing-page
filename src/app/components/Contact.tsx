@@ -23,82 +23,78 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 px-6 lg:px-8 relative">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/5 mb-6">
-            <span className="text-sm tracking-wide text-[#00d4ff]">GET IN TOUCH</span>
+    <section id="contact" className="relative px-6 py-24 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border bg-background mb-6">
+            <span className="text-sm tracking-wide text-muted-foreground">START HERE</span>
           </div>
           <h2 className="text-4xl md:text-6xl tracking-tight mb-6">
-            Let's Build Something <span className="text-[#00d4ff]">Together</span>
+            Bring KlickSpark Media the <span className="text-white/75">next build</span>
           </h2>
-          <p className="text-xl text-white/60">
-            Ready to start your project? Fill out the form below and we'll get back to you within 24 hours.
+          <p className="text-xl text-muted-foreground">
+            Tell us whether you need a Shopify storefront, a SaaS interface, or a stronger WordPress system. We will respond with a tighter next step.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Contact Info */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl mb-8">Contact Information</h3>
+              <h3 className="mb-8 text-2xl">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#00d4ff]/10 border border-[#00d4ff]/30 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-[#00d4ff]" />
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border bg-white/[0.03]">
+                    <Mail className="w-5 h-5 text-white/85" />
                   </div>
                   <div>
-                    <div className="text-white/60 text-sm mb-1">Email</div>
+                    <div className="mb-1 text-sm text-muted-foreground">Email</div>
                     <div className="text-white">hello@klicksparkmedia.com</div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#00d4ff]/10 border border-[#00d4ff]/30 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-[#00d4ff]" />
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border bg-white/[0.03]">
+                    <Phone className="w-5 h-5 text-white/85" />
                   </div>
                   <div>
-                    <div className="text-white/60 text-sm mb-1">Phone</div>
-                    <div className="text-white">+1 (555) 123-4567</div>
+                    <div className="mb-1 text-sm text-muted-foreground">Focus</div>
+                    <div className="text-white">Shopify, SaaS, WordPress</div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#00d4ff]/10 border border-[#00d4ff]/30 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-[#00d4ff]" />
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border bg-white/[0.03]">
+                    <MapPin className="w-5 h-5 text-white/85" />
                   </div>
                   <div>
-                    <div className="text-white/60 text-sm mb-1">Location</div>
-                    <div className="text-white">San Francisco, CA<br />New York, NY</div>
+                    <div className="mb-1 text-sm text-muted-foreground">Working Style</div>
+                    <div className="text-white">Remote studio<br />Focused project delivery</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Business Hours */}
-            <div className="p-6 border border-white/10 rounded-2xl bg-white/[0.02] backdrop-blur-sm">
-              <h4 className="text-lg mb-4">Business Hours</h4>
+            <div className="rounded-2xl border bg-background/70 p-6 backdrop-blur-sm">
+              <h4 className="text-lg mb-4">What To Include</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-white/60">Monday - Friday</span>
-                  <span className="text-white">9:00 - 18:00</span>
+                  <span className="text-muted-foreground">Platform</span>
+                  <span className="text-white">Shopify / SaaS / WP</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/60">Saturday</span>
-                  <span className="text-white">10:00 - 16:00</span>
+                  <span className="text-muted-foreground">Stage</span>
+                  <span className="text-white">New build / redesign</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-white/60">Sunday</span>
-                  <span className="text-white">Closed</span>
+                  <span className="text-muted-foreground">Need</span>
+                  <span className="text-white">Design / dev / system</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -112,7 +108,7 @@ export function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/[0.05] border border-white/10 rounded-lg focus:border-[#00d4ff] focus:outline-none transition-colors text-white"
+                    className="w-full rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
                     placeholder="John Doe"
                   />
                 </div>
@@ -128,7 +124,7 @@ export function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/[0.05] border border-white/10 rounded-lg focus:border-[#00d4ff] focus:outline-none transition-colors text-white"
+                    className="w-full rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -145,7 +141,7 @@ export function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/[0.05] border border-white/10 rounded-lg focus:border-[#00d4ff] focus:outline-none transition-colors text-white"
+                    className="w-full rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
                     placeholder="Your Company"
                   />
                 </div>
@@ -159,7 +155,7 @@ export function Contact() {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/[0.05] border border-white/10 rounded-lg focus:border-[#00d4ff] focus:outline-none transition-colors text-white"
+                    className="w-full rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
                     style={{ colorScheme: "dark" }}
                   >
                     <option value="">Select budget range</option>
@@ -182,14 +178,14 @@ export function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className="w-full px-4 py-3 bg-white/[0.05] border border-white/10 rounded-lg focus:border-[#00d4ff] focus:outline-none transition-colors text-white resize-none"
-                  placeholder="Tell us about your project..."
+                  className="w-full resize-none rounded-lg border bg-white/[0.04] px-4 py-3 text-white transition-colors focus:border-white/30 focus:outline-none"
+                  placeholder="Tell us what you are building, what is not working, and what outcome you need."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#00d4ff] text-black px-8 py-4 rounded-lg hover:bg-[#00bfe6] transition-all duration-200 hover:shadow-[0_0_30px_rgba(0,212,255,0.5)] flex items-center justify-center gap-2"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 text-black transition-all duration-200 hover:bg-white/90"
               >
                 <span>Send Message</span>
                 <Send className="w-5 h-5" />
@@ -199,8 +195,7 @@ export function Contact() {
         </div>
       </div>
 
-      {/* Background Decoration */}
-      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-[#00d4ff]/5 rounded-full blur-[120px] -z-10"></div>
+      <div className="absolute top-1/2 right-1/4 -z-10 h-96 w-96 rounded-full bg-white/[0.03] blur-[120px]"></div>
     </section>
   );
 }

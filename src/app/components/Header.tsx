@@ -14,17 +14,16 @@ export function Header() {
   };
 
   const navItems = [
-    { name: "Work", href: "#work" },
     { name: "Services", href: "#services" },
+    { name: "Work", href: "#work" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" }
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 backdrop-blur-md bg-black/80">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-dashed border-white/10 bg-black/70 backdrop-blur-xl">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex h-20 items-center justify-between">
           <div className="flex-shrink-0">
             <a 
               href="#" 
@@ -32,27 +31,30 @@ export function Header() {
                 e.preventDefault(); 
                 window.scrollTo({ top: 0, behavior: "smooth" }); 
               }}
-              className="text-2xl tracking-tight cursor-pointer"
+              className="flex items-center gap-3 cursor-pointer"
             >
-              KlickSpark<span className="text-[#00d4ff]">Media</span>
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-sm font-semibold text-white">
+                KS
+              </span>
+              <span className="text-sm font-medium uppercase tracking-[0.22em] text-white/90">
+                KlickSpark Media
+              </span>
             </a>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <a 
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+                className="cursor-pointer text-sm text-white/65 transition-colors duration-200 hover:text-white"
               >
                 {item.name}
               </a>
             ))}
           </nav>
 
-          {/* CTA Button - Desktop */}
           <button 
             onClick={() => {
               const element = document.querySelector("#contact");
@@ -60,31 +62,30 @@ export function Header() {
                 element.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="hidden md:block bg-[#00d4ff] text-black px-6 py-3 rounded-lg hover:bg-[#00bfe6] transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,212,255,0.5)]"
+            className="hidden rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition-all duration-200 hover:bg-white/90 md:block"
           >
             Start a Project
           </button>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-white"
+            className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-medium text-white md:hidden"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <span>{mobileMenuOpen ? "Close" : "Menu"}</span>
+            {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/10 py-6">
-            <nav className="flex flex-col gap-6">
+          <div className="border-t border-white/10 py-6 md:hidden">
+            <nav className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-black/95 p-6 shadow-2xl shadow-black/40">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-white/80 hover:text-white transition-colors duration-200 text-lg cursor-pointer"
+                  className="cursor-pointer text-lg text-white/80 transition-colors duration-200 hover:text-white"
                 >
                   {item.name}
                 </a>
@@ -97,7 +98,7 @@ export function Header() {
                     setMobileMenuOpen(false);
                   }
                 }}
-                className="bg-[#00d4ff] text-black px-6 py-3 rounded-lg hover:bg-[#00bfe6] transition-all duration-200 text-left"
+                className="mt-2 rounded-full bg-white px-6 py-3 text-left text-sm font-medium text-black transition-all duration-200 hover:bg-white/90"
               >
                 Start a Project
               </button>
