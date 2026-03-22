@@ -13,7 +13,10 @@ export function HeroSection() {
 
   return (
     <>
-      <section className="overflow-hidden pt-24">
+      <section
+        className="overflow-hidden pt-24"
+        aria-labelledby="hero-heading"
+      >
         <div className="relative mx-auto max-w-6xl px-6 py-24 lg:py-20">
           <div className="lg:flex lg:items-center lg:gap-12">
             <div className="relative z-10 mx-auto max-w-xl text-center lg:ml-0 lg:w-1/2 lg:text-left">
@@ -33,11 +36,14 @@ export function HeroSection() {
                 <ArrowRight className="size-4" />
               </a>
 
-              <h1 className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-5xl">
-                We design and build sharper Shopify, SaaS, and WordPress experiences
+              <h1
+                id="hero-heading"
+                className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-5xl"
+              >
+                Shopify, SaaS, and WordPress design and development for teams that need sharper digital products
               </h1>
               <p className="mt-8">
-                KlickSpark Media helps brands and product teams turn messy digital surfaces into cleaner storefronts, tighter interfaces, and more credible systems.
+                KlickSpark Media is a digital studio that designs and builds Shopify storefronts, SaaS interfaces, and WordPress systems with cleaner UX, stronger structure, and more credible execution.
               </p>
 
               <div>
